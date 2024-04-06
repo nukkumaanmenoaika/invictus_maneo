@@ -42,10 +42,13 @@ function shuffleArray(array) {
      
   return array;
 }
-
+function reloadPage(){
+  modal.style.display = "block";
+  modal.style.display = "none";
+  window.location.reload();
+}
 answersArr = shuffleArray(answersArr)
 
-alert(rightAnswer)
 
 label1.innerHTML = answersArr[0];
 label2.innerHTML = answersArr[1];
@@ -59,6 +62,7 @@ answ.onclick = function(){
   if(input1.checked){
     if(label1.innerHTML == rightAnswer){
       alert('Правильно')
+      reloadPage()
     }
     else{
       alert('Неправильно')
@@ -68,6 +72,7 @@ answ.onclick = function(){
   if(input2.checked){
     if(label2.innerHTML == rightAnswer){
       alert('Правильно')
+      reloadPage()
     }
     else{
       alert('Неправильно')
@@ -77,13 +82,12 @@ answ.onclick = function(){
   if(input3.checked){
     if(label3.innerHTML == rightAnswer){
       alert('Правильно')
+      reloadPage()
     }
     else{
       alert('Неправильно')
     }
   }
 
-  modal.style.display = "block";
-  modal.style.display = "none";
-  window.location.reload();
+
 }
