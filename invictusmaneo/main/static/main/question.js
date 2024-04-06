@@ -27,6 +27,8 @@ var label1 = document.getElementById('answer');
 var label2 = document.getElementById('wrongAnswer1');
 var label3 = document.getElementById('wrongAnswer2');
 
+var score = document.getElementById('score')
+
 var rightAnswer = label1.innerHTML;
 
 let answersArr = [label1.innerHTML, label2.innerHTML, label3.innerHTML]
@@ -45,8 +47,6 @@ function shuffleArray(array) {
 
 answersArr = shuffleArray(answersArr)
 
-alert(rightAnswer)
-
 label1.innerHTML = answersArr[0];
 label2.innerHTML = answersArr[1];
 label3.innerHTML = answersArr[2];
@@ -59,27 +59,33 @@ answ.onclick = function(){
   if(input1.checked){
     if(label1.innerHTML == rightAnswer){
       alert('Правильно')
+      score.innerHTML = 10
     }
     else{
       alert('Неправильно')
+      return
     }
   }
 
   if(input2.checked){
     if(label2.innerHTML == rightAnswer){
       alert('Правильно')
+      score.innerHTML = 10
     }
     else{
       alert('Неправильно')
+      return
     }
   }
 
   if(input3.checked){
     if(label3.innerHTML == rightAnswer){
       alert('Правильно')
+      score.innerHTML = 10
     }
     else{
       alert('Неправильно')
+      return
     }
   }
 
