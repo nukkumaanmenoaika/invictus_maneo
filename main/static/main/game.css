@@ -1,0 +1,24 @@
+body{
+    background-image: url(Game.png);
+    background-size: 1920px 1000px;
+    image-rendering: pixelated;
+}
+.yellow-text-with-black-shadow {
+    text-shadow: black -7px 7px 12px;
+    color: yellow;
+    font: 1.5em "Segoe Script", serif;
+    padding-top: 70px;
+    margin-left: -180px;
+    font-size: 20px;
+    text-align: left;
+    }
+.yellow-text {
+    text-shadow: black -7px 7px 12px;
+    color: red;
+    font: 1.5em "Segoe Script", serif;
+    font-size: 40px;
+    }
+.colbtn{
+    text-align: left;
+    margin-left: -305px;
+  }
