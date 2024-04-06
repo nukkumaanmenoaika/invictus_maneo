@@ -10,6 +10,9 @@
             text-decoration: none;
             color: white;
         }
+        a:hover{
+            color: yellow;
+        }
      </style>
 </head>
 <body>
@@ -22,14 +25,11 @@
                 {{ form.as_p }}
                 <div class="row  justify-content-center">
                     <button class="btn btn-success mt-3 " type="submit" style="width: 150px;">
-                        <a>Войти</a>
+                        Войти
                     </button>
-                    <a href="{% url 'reg' %}">
-                        <button class="btn btn-success mt-3" style="width: 200px;">
-                            Зарегистрироваться
-                        </button>
-                    </a>
-
+                    <button class="btn btn-success mt-3" type="submit" style="width: 200px;">
+                        <a href="{% url 'reg' %}">Зарегистрироваться</a>
+                    </button>
                 </div>
                 <span style="color: red;">{{ error }}</span>
             </form>

@@ -19,6 +19,14 @@ class Files(models.Model):
         def __str__(self):
             return self.title
 
+class Images(models.Model):
+    images = models.ImageField(upload_to="files_to/images/", blank=False, null=True)
+    class Meta:
+        verbose_name = "Image"
+        verbose_name_plural = "Images"
+        def __str__(self):
+            return self.title
+
 class Questions(models.Model):
     question = models.TextField("Вопрос", max_length=255, null=True)
     answer = models.TextField("Ответ", max_length=255,  null=True)

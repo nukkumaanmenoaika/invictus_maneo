@@ -13,14 +13,17 @@ def Game(request):
     user = Data.objects.get(id=Current_user[0])
     Audio = Files.objects.get(id=question_id)
     question = Questions.objects.get(id=question_id)
-
-    question_id += 1
-    if question_id == 10: question_id = 1
+    images = Images.objects.get(id=question_id)
     context = {
         "el": user,
         "aud": Audio,
-        "que": question
+        "que": question,
+        'im': images,
+        'count_id': question_id
     }
+    question_id += 1
+    if question_id == 11: question_id = 1
+
     return render(request, "main/game.html", context)
 
 
